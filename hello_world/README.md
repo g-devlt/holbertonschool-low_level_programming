@@ -1,5 +1,5 @@
 ## 0-preprocessor
-Outputs the preprocessor step of the file in $CFILE to "./c"
+0;10;1cOutputs the preprocessor step of the file in $CFILE to "./c"
 
 ## 1-compiler
 Compiles with gcc $CFILE but do not link
@@ -15,3 +15,6 @@ C file that prints "\"Programming is like building a multilingual puzzle" using 
 
 ## 5-printf.c
 C file that prints "with proper grammar, but the outcome is a piece of art," using printf, betty compliant
+
+## 6-size.c
+C file that prints the size of various data types
