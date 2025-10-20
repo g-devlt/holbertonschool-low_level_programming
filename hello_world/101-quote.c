@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <string.h>
 
 /**
  * main - Prints to stderr without forbidden funcstions
@@ -10,6 +9,6 @@ int main(void)
 	const char *out =
 		"and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	write(2, out, strlen(out));
+	write(2, out, 58);
 	return (1);
 }
