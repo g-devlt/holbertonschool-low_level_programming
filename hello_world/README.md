@@ -6,3 +6,6 @@ Compiles with gcc $CFILE but do not link
 
 ## 2-assembler
 Compiles with gcc $CFILE but do not assemble
+
+## 3-name
+Compiles $CFILE with gcc and outputs to cisfun
