@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
- * main - Prints to stderr without printf or puts
+ * main - Prints to stderr without forbidden funcstions
  * Return: Returns 1
  */
 int main(void)
