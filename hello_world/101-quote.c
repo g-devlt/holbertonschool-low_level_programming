@@ -9,6 +9,6 @@ int main(void)
 	const char *out =
 		"and that piece of art is useful\" - Dora Korpar, 2015-10-19";
 
-	fwrite(out, sizeof(out), 1, stderr);
+	write(2, out, sizeof(out));
 	return (1);
 }
