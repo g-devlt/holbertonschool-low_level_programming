@@ -6,3 +6,6 @@ Tests the last digit of a random number
 
 ## 2-print_alphabet.c
 Prints the whole alphabet with a new line
+
+## 3-print_alphabets.c
+Prints the alphabet, lowercase and uppercase
