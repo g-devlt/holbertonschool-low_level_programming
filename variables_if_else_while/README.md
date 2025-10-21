@@ -9,3 +9,6 @@ Prints the whole alphabet with a new line
 
 ## 3-print_alphabets.c
 Prints the alphabet, lowercase and uppercase
+
+## 4-print_alphabt.c
+Prints the whole aphabet except 'e' or 'q'
