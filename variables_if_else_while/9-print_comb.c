@@ -11,16 +11,12 @@ int main(void)
 
 	for (a = '0'; a <= '9'; ++a)
 	{
-		for (b = '0'; b <= '9'; ++b)
+		if(a != '0')
 		{
-			if (!(a == '0' && b == '0'))
-			{
-				putchar(',');
-				putchar(' ');
-			}
-			putchar(a);
-			putchar(b);
+			putchar(',');
+			putchar(' ');
 		}
+		putchar(a);
 	}
 
 	return (0);
