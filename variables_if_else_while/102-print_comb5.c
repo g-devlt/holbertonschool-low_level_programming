@@ -14,22 +14,22 @@ int main(void)
 		{
 			for (c = a; c <= '9'; ++c)
 			{
-				for (d = b + 1; d <= '9'; ++d)
+				for (d = b; d <= '9'; ++d)
 				{
-					if (!(a + b == 2 * '0' && c == '0' && d == '1'))
-					{
-						putchar(',');
-						putchar(' ');
-					}
+					if (a == '0' && b == '0' && c == '0' && d == '0')
+						continue;
 					putchar(a);
 					putchar(b);
 					putchar(' ');
 					putchar(c);
 					putchar(d);
+					putchar(',');
 				}
 			}
 		}
 	}
+
+
 	putchar('\n');
 
 	return (0);
