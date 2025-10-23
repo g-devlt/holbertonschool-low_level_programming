@@ -18,12 +18,18 @@ int main(void)
 				{
 					if (a == '0' && b == '0' && c == '0' && d == '0')
 						continue;
+
+					if (!(a == '0' && b == '0' && c == '0' && d == '1'))
+					{
+						putchar(',');
+						putchar(' ');
+					}
+
 					putchar(a);
 					putchar(b);
 					putchar(' ');
 					putchar(c);
 					putchar(d);
-					putchar(',');
 				}
 			}
 		}
