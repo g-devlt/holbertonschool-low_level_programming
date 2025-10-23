@@ -16,7 +16,7 @@ int main(void)
 			{
 				for (d = b; d <= '9'; ++d)
 				{
-					if (a == '0' && b == '0' && c == '0' && d == '0')
+					if (a == c && b == d)
 						continue;
 
 					if (!(a == '0' && b == '0' && c == '0' && d == '1'))
