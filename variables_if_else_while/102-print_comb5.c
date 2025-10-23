@@ -10,9 +10,9 @@ int main(void)
 
 	for (a = 0; a <= 100 - 1; ++a)
 	{
-		for (b = a; b <= 100; ++b)
+		for (b = a + 1; b <= 100; ++b)
 		{
-			if(!(a == 0 && b == 0))
+			if (!(a == 0 && b == 1))
 			{
 				putchar(',');
 				putchar(' ');
