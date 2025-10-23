@@ -14,9 +14,9 @@ int main(void)
 	{
 		for (b = a + 1; b <= '9' - 1; ++b)
 		{
-			for (c = b + 1; b <= '9'; ++c)
+			for (c = b + 1; c <= '9'; ++c)
 			{
-				if (!(a == 0 && b == '1' && c == '2'))
+				if (!(a == '0' && b == '1' && c == '2'))
 				{
 					putchar(',');
 					putchar(' ');
