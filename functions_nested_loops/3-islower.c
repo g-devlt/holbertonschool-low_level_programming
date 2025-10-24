@@ -16,7 +16,7 @@ int _islower(int c)
 
 	b = (unsigned char)c;
 
-	if(97 <= b && b <= 122)
+	if (b >= 97 && b <= 122)
 		return (1);
 	return (0);
 }
