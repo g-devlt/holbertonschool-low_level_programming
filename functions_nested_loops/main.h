@@ -8,7 +8,10 @@
 	 * On error, -1 is returned, and errno is set appropriately.
 	 */
 	int _putchar(char c);	
-
+	
+	/**
+	 * print_alphabet - Prints the whole alphabet lowercase
+	*/
 	void print_alphabet(void);
 
 #endif
