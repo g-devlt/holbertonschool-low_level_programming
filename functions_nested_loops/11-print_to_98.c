@@ -1,5 +1,9 @@
 #include <stdlib.h>
 
+/**
+ * print_to_98 - Prints every integer from n to 98
+ * @n: The start of the iteration
+*/
 void print_to_98(int n)
 {
 	int i = n;
