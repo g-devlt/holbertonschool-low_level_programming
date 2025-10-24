@@ -1,5 +1,9 @@
 #include "main.h"
 
+/**
+ * print_alphabet - Prints the whole alphabet lowercase
+ *
+*/
 void print_alphabet(void)
 {
 	const char *str = "abcdefghijklmnopqrstuvwxyz\n";
