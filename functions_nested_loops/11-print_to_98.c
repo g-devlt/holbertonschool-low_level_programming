@@ -13,6 +13,8 @@ void print_to_98(int n)
 	{
 		for (; i >= 98; --i)
 		{
+			if (i != n)
+				printf(", ");
 			printf("%d", i);
 		}
 	}
@@ -20,6 +22,8 @@ void print_to_98(int n)
 	{
 		for(; i <= 98; --i)
 		{
+			if (i != n)
+				printf(", ");
 			printf("%d", i);
 		}
 	}
