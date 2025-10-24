@@ -7,13 +7,15 @@
 */
 int _islower(int c)
 {
+	unsigned char b;
+
 	if (c == -1)
 		return (0);
 	if (c > 255)
 		return (0);
 
-	unsigned char b = (unsigned char)c;
-	
+	b = (unsigned char)c;
+
 	if(97 <= b && b <= 122)
 		return (1);
 	return (0);
