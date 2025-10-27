@@ -1,0 +1,19 @@
+#include "main.h"
+
+/**
+ * more_numbers - Prints every number from 0 to 14
+*/
+void more_numbers(void)
+{
+	int n = 0;
+
+	for (; n <= 14; ++n)
+	{
+		if (n >= 10)
+		{
+			_putchar('0' + (n / 10));
+		}
+		_putchar('0' + (n % 10));
+	}
+}
+
