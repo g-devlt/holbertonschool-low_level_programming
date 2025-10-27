@@ -1,4 +1,4 @@
-
+#include "main.h"
 
 /**
  * _isdigit - Tests a character.
