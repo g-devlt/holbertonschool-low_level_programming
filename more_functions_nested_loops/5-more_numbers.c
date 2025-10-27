@@ -5,15 +5,20 @@
 */
 void more_numbers(void)
 {
-	int n = 0;
+	int n, i;
+	
 
-	for (; n <= 14; ++n)
+	for (i = 0; i < 10; ++i)
 	{
-		if (n >= 10)
+
+		for (n = 0; n <= 14; ++n)
 		{
-			_putchar('0' + (n / 10));
+			if (n >= 10)
+			{
+				_putchar('0' + (n / 10));
+			}
+			_putchar('0' + (n % 10));
 		}
-		_putchar('0' + (n % 10));
 	}
 }
 
