@@ -8,13 +8,12 @@
 int _isupper(int c)
 {
 	unsigned char cc;
-	
-	if(c == -1)
-		return 0;
-	
-	cc = (unsigned char)c;
-	if(cc >= 65 && cc <= 90)
-		return 1;
-	return 0;
 
+	if (c == -1)
+		return (0);
+
+	cc = (unsigned char)c;
+	if (cc >= 65 && cc <= 90)
+		return (1);
+	return (0);
 }
