@@ -3,7 +3,7 @@
 /**
  * print_most_numbers - Prints alomost every digit followed by a new line
 */
-void print_numbers(void)
+void print_most_numbers(void)
 {
 	char c;
 
