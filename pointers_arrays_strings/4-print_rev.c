@@ -5,9 +5,9 @@
  * @str: The cstring
  * Return: The length of the cstring
 */
-long int _strlen(char *str)
+int _strlen(char *str)
 {
-	long int i = 0;
+	int i = 0;
 
 	while (str[i] != 0)
 		++i;
@@ -20,7 +20,7 @@ long int _strlen(char *str)
 */
 void print_rev(char *s)
 {
-	long int i = _strlen(s);
+	int i = _strlen(s);
 	
 	while (i > 0)
 	{
