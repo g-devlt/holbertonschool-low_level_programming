@@ -1,10 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 
+/**
+ * main - FizzBuzz
+ * Return: 0 on success
+*/
 int main(void)
 {
 	int i;
-	
+
 
 	for (i = 1; i <= 100; ++i)
 	{
@@ -21,5 +25,5 @@ int main(void)
 	}
 	putchar('\n');
 
-	return 0;
+	return (0);
 }
