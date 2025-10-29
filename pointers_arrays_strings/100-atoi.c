@@ -22,7 +22,7 @@ int _atoi(char *s)
 	
 	for (i = 0; s[i] != 0; ++i)
 	{	
-		if (!isdigit(s[i]))
+		if (!_isdigit(s[i]))
 		{
 			if(s[i] == '-')
 				n *= -1;
