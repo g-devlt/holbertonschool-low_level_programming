@@ -28,12 +28,12 @@ int _atoi(char *s)
 	{	
 		if (!_isdigit(s[i]))
 		{
-			if(s[i] == '-')
+			if (n)
+				break;
+			if (s[i] == '-')
 				f *= -1;
 			else if (s[i] == '+')
 				continue;
-			else if (n)
-				break;
 			continue;
 		}
 		else
@@ -42,5 +42,5 @@ int _atoi(char *s)
 			n += (s[i] - '0') * f;
 		}
 	}
-	return (n * f);
+	return (n);
 }
