@@ -5,7 +5,7 @@
  * @c: The character to check
  * Return: True if the character is a digit, false otherwise
 */
-bool _isdigit(char c)
+int _isdigit(char c)
 {
 	return (c >= '0' && c <= '9');
 }
