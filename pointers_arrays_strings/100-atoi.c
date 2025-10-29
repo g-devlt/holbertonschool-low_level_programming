@@ -51,7 +51,8 @@ int _atoi(char *s)
 				if ((n > INT_MAX / 10) && digit > 7)
 					return INT_MIN;
 			}
-
+			
+			n *= 10;
 			n += digit;
 		}
 	}
