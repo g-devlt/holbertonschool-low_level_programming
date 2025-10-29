@@ -23,6 +23,7 @@ int _atoi(char *s)
 	int f = 1;
 	int n = 0;
 	int i;
+	int digit = 0;
 	
 	for (i = 0; s[i] != 0; ++i)
 	{	
@@ -38,8 +39,17 @@ int _atoi(char *s)
 		}
 		else
 		{
-			n *= (10 * f);
-			n += (s[i] - '0') * f;
+			n *= 10;
+			digit = s[i] - '0';
+
+			if (n + digit >= INT_MAX)
+			{
+				if (f == -1)
+					return INT_MIN;
+				return INT_MAX;
+			}
+
+			n += digit;
 		}
 	}
 	return (n);
