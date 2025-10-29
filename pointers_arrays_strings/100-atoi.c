@@ -14,7 +14,7 @@ int _isdigit(char c)
 }
 
 /**
- * -atoi - Converts a cstring to an integer
+ * _atoi - Converts a cstring to an integer
  * @s: The cstring to convert
  * Return: The number extracted from s.
 */
@@ -24,9 +24,9 @@ int _atoi(char *s)
 	int n = 0;
 	int i;
 	int digit = 0;
-	
+
 	for (i = 0; s[i] != 0; ++i)
-	{	
+	{
 		if (!_isdigit(s[i]))
 		{
 			if (n)
@@ -42,12 +42,12 @@ int _atoi(char *s)
 			digit = s[i] - '0';
 			if ((n >= INT_MAX / 10) && digit > 7)
 			{
-				if(f == 1)
-					return INT_MAX;
+				if (f == 1)
+					return (INT_MAX);
 				else
-					return INT_MIN;
-			}	
-			
+					return (INT_MIN);
+			}
+
 			n *= 10;
 			n += digit;
 		}
