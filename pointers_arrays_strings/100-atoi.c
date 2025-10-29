@@ -52,5 +52,5 @@ int _atoi(char *s)
 			n += digit;
 		}
 	}
-	return (n);
+	return (n * f);
 }
