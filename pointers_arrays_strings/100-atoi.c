@@ -27,7 +27,9 @@ int _atoi(char *s)
 		{
 			if(s[i] == '-')
 				f *= -1;
-			if (i)
+			else if (s[i] == '+')
+				continue;
+			else if (i)
 				break;
 			continue;
 		}
