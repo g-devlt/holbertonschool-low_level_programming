@@ -17,6 +17,7 @@ int _isdigit(char c)
 */
 int _atoi(char *s)
 {
+	int f = 1;
 	int n = 0;
 	int i;
 	
@@ -25,7 +26,7 @@ int _atoi(char *s)
 		if (!_isdigit(s[i]))
 		{
 			if(s[i] == '-')
-				n *= -1;
+				f *= -1;
 			if (i)
 				break;
 			continue;
@@ -36,5 +37,5 @@ int _atoi(char *s)
 			n += s[i] - '0';
 		}
 	}
-	return (n);
+	return (n * f);
 }
