@@ -40,17 +40,13 @@ int _atoi(char *s)
 		else
 		{
 			digit = s[i] - '0';
-			
-			if(f == 1)
+			if ((n >= INT_MAX / 10) && digit > 7)
 			{
-				if ((n > INT_MAX / 10) && digit > 7)
+				if(f == 1)
 					return INT_MAX;
-			}
-			else
-			{
-				if ((n > INT_MAX / 10) && digit > 7)
+				else
 					return INT_MIN;
-			}
+			}	
 			
 			n *= 10;
 			n += digit;
