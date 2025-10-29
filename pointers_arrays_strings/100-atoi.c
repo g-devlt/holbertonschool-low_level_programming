@@ -1,5 +1,8 @@
 #include "main.h"
 
+#define INT_MAX 2147483647
+#define INT_MIN -2147483648
+
 /**
  * _isdigit - Checks if a character is a digit
  * @c: The character to check
@@ -35,8 +38,8 @@ int _atoi(char *s)
 		}
 		else
 		{
-			n *= 10;
-			n += s[i] - '0';
+			n *= (10 * f);
+			n += (s[i] - '0') * f;
 		}
 	}
 	return (n * f);
