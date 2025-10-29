@@ -29,7 +29,7 @@ int _atoi(char *s)
 				f *= -1;
 			else if (s[i] == '+')
 				continue;
-			else if (i)
+			else if (n)
 				break;
 			continue;
 		}
