@@ -21,10 +21,7 @@ void print_rec(int n)
 	int nn, d;
 
 	if (n == 0)
-	{
-		_putchar('0');
 		return;
-	}
 
 	nn = _abs(n / 10);
 	d = _abs(n % 10);
@@ -44,5 +41,10 @@ void print_number(int n)
 	{
 		_putchar('-');
 	}
-	print_rec(n);
+	if (n == 0)
+	{
+		_putchar('0');
+	}
+	else
+		print_rec(n);
 }
