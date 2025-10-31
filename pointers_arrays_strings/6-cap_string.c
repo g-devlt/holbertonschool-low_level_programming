@@ -39,6 +39,7 @@ char *cap_string(char *str)
 			}
 			break;
 		}
+		++i;
 	}
 	return (str);
 }
