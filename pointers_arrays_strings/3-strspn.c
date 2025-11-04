@@ -22,9 +22,10 @@ unsigned int _strspn(char *s, char *accept)
 				break;
 			}
 		}
-		if(!c) break;
+		if (!c)
+			break;
 	}
-	
-	return i;
+
+	return (i);
 }
 
