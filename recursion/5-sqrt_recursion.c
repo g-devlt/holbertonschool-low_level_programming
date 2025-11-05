@@ -9,10 +9,10 @@
 int sqrt_rec(int n, int i)
 {
 	if ((i == 0 && n != 0) || i * i < n)
-		return -1;
+		return (-1);
 
 	if (i * i == n)
-		return i;
+		return (i);
 
 	return (sqrt_rec(n, i - 1));
 }
@@ -24,5 +24,5 @@ int sqrt_rec(int n, int i)
 */
 int _sqrt_recursion(int n)
 {
-	return sqrt_rec(n, n);
+	return (sqrt_rec(n, n));
 }
