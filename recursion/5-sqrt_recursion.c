@@ -8,6 +8,8 @@
 */
 int sqrt_rec(int n, int i)
 {
+	if(n < 0)
+		return (-1);
 	if ((i == 0 && n != 0) || i * i < n)
 		return (-1);
 
