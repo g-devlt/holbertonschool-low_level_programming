@@ -2,21 +2,19 @@
 
 /**
  * sqrt_rec - Finds a square root using recursion
- * @n: The integer we are searching for a sqrt
+ * @n: The integer we are computing for a sqrt
  * @i: The integer sqrt we compare to n's
  * Return: The sqrt of n or -1 if n has no natural integer
 */
 int sqrt_rec(int n, int i)
 {
-	if (n < 0)
-		return (-1);
-	if ((i == 0 && n != 0) || i * i < n)
-		return (-1);
-
 	if (i * i == n)
 		return (i);
 
-	return (sqrt_rec(n, i - 1));
+	if (i * i > n)
+		return (-1);
+
+	return (sqrt_rec(n, i + 1));
 }
 
 /**
@@ -26,5 +24,9 @@ int sqrt_rec(int n, int i)
 */
 int _sqrt_recursion(int n)
 {
-	return (sqrt_rec(n, n));
+	if (n == 0)
+		return (0);
+	if (n < 0)
+		return (-1);
+	return (sqrt_rec(n, 0));
 }
