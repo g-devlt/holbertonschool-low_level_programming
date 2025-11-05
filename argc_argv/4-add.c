@@ -16,7 +16,7 @@ int main(int argc, char **argv)
 	for (; i < argc; ++i)
 	{
 		sum += strtol(argv[i], &end, 10);
-		if (end == argv[i])
+		if (*end != 0)
 		{
 			printf("Error\n");
 			return (1);
