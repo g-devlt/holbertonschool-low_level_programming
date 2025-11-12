@@ -27,6 +27,9 @@ char *_strdup(char *str)
 	int len;
 	char *buf;
 
+	if (str == NULL)
+		return (NULL);
+
 	len = __strlen(str);
 	buf = malloc(len + 1); /*Adjust for null terminator*/
 
