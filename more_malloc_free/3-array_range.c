@@ -10,7 +10,7 @@ int *array_range(int min, int max)
 	if (min > max)
 		return (NULL);
 
-	unsigned int len = max - min + 1;
+	len = max - min + 1;
 
 	buf = malloc(sizeof(int) * len);
 
