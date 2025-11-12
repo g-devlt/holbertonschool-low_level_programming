@@ -27,6 +27,7 @@ unsigned int _strlen(char *s)
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int len1, len2, i;
+	char *buf;
 
 	if (s1 == NULL)
 		len1 = 0;
@@ -42,7 +43,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			len2 = n;
 	}
 
-	char *buf = malloc(len1 + len2 + 1);
+	buf = malloc(len1 + len2 + 1);
 
 	if (buf == NULL)
 		return (NULL);
