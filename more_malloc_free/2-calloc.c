@@ -12,8 +12,13 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 	unsigned int len = nmemb * size;
 	char *buf;
 	unsigned int i;
+	
+	if (len == 0)
+		return (NULL);
 
 	buf = malloc(len);
+	if (!buf)
+		return (NULL);
 
 	for (i = 0; i < len; ++i)
 	{
