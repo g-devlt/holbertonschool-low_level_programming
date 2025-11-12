@@ -9,8 +9,8 @@
 */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	unsigned int len = nmeb * size;
-	void *buf;
+	unsigned int len = nmemb * size;
+	char *buf;
 	unsigned int i;
 
 	buf = malloc(len);
