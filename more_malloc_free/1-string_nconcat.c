@@ -1,5 +1,5 @@
 #include "main.h"
-#include <stlib.h>
+#include <stdlib.h>
 
 /**
  * _strlen - Computes the length of a cstring
