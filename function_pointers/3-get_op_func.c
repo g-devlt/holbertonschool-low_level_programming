@@ -1,0 +1,33 @@
+#include "function_pointers.h"
+#include <string.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+/**
+ * get_op_func - Gets the function pointer to the corresponding function
+ * @s: The operator
+ * Return: The function pointer to the corresponding function
+*/
+int (*get_op_func(char *s))(int, int)
+{
+	op_t ops[] = {
+		{"+", op_add},
+		{"-", op_sub},
+		{"*", op_mul},
+		{"/", op_div},
+		{"%", op_mod},
+		{NULL, NULL}
+	};
+	int i = 0;
+
+	while(ops[i])
+	{
+		if(strcmp(ops[i]->op, s))
+		{
+			return ops[i]->f;
+		}
+	}
+
+	printf("Error\n");
+	exit(99);
+}
