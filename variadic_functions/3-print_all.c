@@ -9,6 +9,8 @@
 */
 void print_all(const char * const format, ...)
 {
+	char *s;
+
 	unsigned int i;
 	va_list ap;
 
@@ -29,8 +31,16 @@ void print_all(const char * const format, ...)
 			printf("%f", va_arg(ap, double));
 			break;
 		case 's':
-			printf("%s", va_arg(ap, char *));
+		{
+			s = va_arg(ap, char *);
+			
+			if (s == NULL)
+				printf("(nil)");
+			else
+				printf("%s", va_arg(ap, char *));
+
 			break;
+		}
 		default:
 			break;
 		}
