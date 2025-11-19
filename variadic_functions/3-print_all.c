@@ -9,6 +9,7 @@
 */
 void print_all(const char * const format, ...)
 {
+	int sep_enabled = 0;
 	char *s;
 
 	unsigned int i;
@@ -19,16 +20,22 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != 0)
 	{
+		if(sep_enabled)
+			printf(", ");
+
 		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(ap, int));
+			sep_enabled = 1;
 			break;
 		case 'i':
 			printf("%d", va_arg(ap, int));
+			sep_enabled = 1;
 			break;
 		case 'f':
 			printf("%f", va_arg(ap, double));
+			sep_enabled = 1;
 			break;
 		case 's':
 		{
@@ -37,9 +44,11 @@ void print_all(const char * const format, ...)
 			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
+			sep_enabled = 1;
 			break;
 		}
 		default:
+			sep_enabled = 0;
 			break;
 		}
 		++i;
