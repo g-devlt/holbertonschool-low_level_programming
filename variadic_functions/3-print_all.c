@@ -11,40 +11,33 @@ void print_all(const char * const format, ...)
 {
 	int sep_enabled = 0;
 	char *s;
-
 	unsigned int i;
 	va_list ap;
 
 	va_start(ap, format);
-
 	i = 0;
-	while (format[i] != 0)
+	while (format && format[i] != 0)
 	{
-		if(sep_enabled)
+		if (sep_enabled)
 			printf(", ");
-
+		sep_enabled = 1;
 		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(ap, int));
-			sep_enabled = 1;
 			break;
 		case 'i':
 			printf("%d", va_arg(ap, int));
-			sep_enabled = 1;
 			break;
 		case 'f':
 			printf("%f", va_arg(ap, double));
-			sep_enabled = 1;
 			break;
 		case 's':
 		{
 			s = va_arg(ap, char *);
-
 			if (s == NULL)
 				s = "(nil)";
 			printf("%s", s);
-			sep_enabled = 1;
 			break;
 		}
 		default:
