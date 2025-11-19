@@ -19,7 +19,7 @@ void print_all(const char * const format, ...)
 	i = 0;
 	while (format[i] != 0)
 	{
-		switch(format[i])
+		switch (format[i])
 		{
 		case 'c':
 			printf("%c", va_arg(ap, int));
@@ -33,12 +33,10 @@ void print_all(const char * const format, ...)
 		case 's':
 		{
 			s = va_arg(ap, char *);
-			
-			if (s == NULL)
-				printf("(nil)");
-			else
-				printf("%s", s);
 
+			if (s == NULL)
+				s = "(nil)";
+			printf("%s", s);
 			break;
 		}
 		default:
