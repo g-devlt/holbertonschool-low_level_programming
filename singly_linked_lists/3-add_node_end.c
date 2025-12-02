@@ -35,10 +35,13 @@ list_t *add_node_end(list_t **head, const char *str)
 	new->len = len;
 	new->str = strdup(str);
 	if (!new->str)
+	{
+		free(new);
 		return (NULL);
+	}
+	new->next = NULL;
 
-
-	if(current)
+	if (current)
 	{
 		while (current->next)
 		{
