@@ -26,8 +26,8 @@ int _strlen(const char *str)
 list_t *add_node_end(list_t **head, const char *str)
 {
 	int len = _strlen(str);
-	list_t new = (list_t *)malloc(sizeof(list_t));
-	list_t current = *head;
+	list_t *new = (list_t *)malloc(sizeof(list_t));
+	list_t *current = *head;
 
 	if (!new)
 		return (NULL);
@@ -38,11 +38,18 @@ list_t *add_node_end(list_t **head, const char *str)
 		return (NULL);
 
 
-	while (current->next)
+	if(current)
 	{
-		current = current->next;
-	}
+		while (current->next)
+		{
+			current = current->next;
+		}
 
-	current->next = new;
+		current->next = new;
+	}
+	else
+	{
+		*head = new;
+	}
 	return (new);
 }
