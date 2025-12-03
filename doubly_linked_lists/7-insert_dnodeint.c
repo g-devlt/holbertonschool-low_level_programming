@@ -6,6 +6,7 @@
  * @h: The head of the list
  * @idx: The index to insert at
  * @n: The initialization value of the new node
+ * Return: The pointer to the new node
 */
 dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 {
@@ -30,9 +31,9 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 	{
 		prev = prev->next;
 	}
-	if(prev == NULL)
+	if (prev == NULL)
 		return (NULL);
-	
+
 	next = prev->next;
 
 	prev->next = new;
