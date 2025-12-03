@@ -8,6 +8,8 @@
 */
 int sum_dlistint(dlistint_t *head)
 {
+	if(!head)
+		return (0);
 	if (!head->next)
 		return (head->n);
 	return (sum_dlistint(head->next) + head->n);
