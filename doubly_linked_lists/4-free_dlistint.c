@@ -1,12 +1,21 @@
 #include "lists.h"
 
+/**
+ * free_dlistint - Frees a doubly linked list
+ * @head: The head of the list.
+*/
 void free_dlistint(dlistint_t *head)
 {
-	if(head->next == NULL)
+	if (head == NULL)
+		return;
+
+	if (head->next == NULL)
 	{
 		free(head);
-	}else{
-		free_dlistint(head->next);
+	}
+	else
+	{
+		free_list(head->next);
 		free(head);
 	}
 }
