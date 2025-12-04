@@ -14,6 +14,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd = -1;
 	ssize_t red = -1;
 	ssize_t wrote = 0;
+	ssize_t total_wrote = 0;
 	char *buf;
 
 	if (filename == NULL || letters == 0)
@@ -35,7 +36,19 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-	wrote = write(STDOUT_FILENO, buf, red);
+
+	
+	while(total_wrote < red)
+	{
+		wrote = write(STDOUT_FILENO, buf, red);
+		if(wrote < 0)
+		{
+			total_wrote = 0;
+			break;
+		}
+		total_wrote += wrote;
+	}
+	
 	if (wrote != red)
 	{
 		close(fd);
