@@ -48,15 +48,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		}
 		total_wrote += wrote;
 	}
-	
-	if (wrote != red)
-	{
-		close(fd);
-		free(buf);
-		return (0);
-	}
 
 	close(fd);
 	free(buf);
-	return (wrote);
+	return (total_wrote);
 }
