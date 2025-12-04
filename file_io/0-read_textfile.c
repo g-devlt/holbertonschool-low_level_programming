@@ -19,14 +19,17 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	if (filename == NULL || letters == 0)
 		return (0);
-
-	fd = open(filename, O_RDONLY);
-	if (fd < 0)
-		return (0);
-
+	
 	buf = (char *)malloc(sizeof(char) * letters);
 	if (buf == NULL)
 		return (0);
+
+	fd = open(filename, O_RDONLY);
+	if (fd < 0)
+	{
+		free(buf);
+		return (0);
+	}
 
 	red = read(fd, buf, letters);
 	if (red < 0)
@@ -38,7 +41,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	while (total_wrote < red)
 	{
-		wrote = write(STDOUT_FILENO, buf, red);
+		wrote = write(STDOUT_FILENO, buf + total_written, r - total_written);
 		if (wrote < 0)
 		{
 			total_wrote = 0;
