@@ -36,19 +36,16 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	}
 
-
-	
-	while(total_wrote < red)
+	while (total_wrote < red)
 	{
 		wrote = write(STDOUT_FILENO, buf, red);
-		if(wrote < 0)
+		if (wrote < 0)
 		{
 			total_wrote = 0;
 			break;
 		}
 		total_wrote += wrote;
 	}
-
 	close(fd);
 	free(buf);
 	return (total_wrote);
