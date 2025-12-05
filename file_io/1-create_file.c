@@ -42,17 +42,20 @@ int create_file(const char *filename, char *text_content)
 		return (-1);
 	}
 
-	len = _strlen(text_content);
-
-	while (!total_written || (total_written < len))
+	if(text_content)
 	{
-		written = write(fd, text_content + total_written, len - total_written);
-		if (written <= 0)
+		len = _strlen(text_content);
+
+		while (!total_written || (total_written < len))
 		{
-			close(fd);
-			return (-1);
+			written = write(fd, text_content + total_written, len - total_written);
+			if (written <= 0)
+			{
+				close(fd);
+				return (-1);
+			}
+			total_written += written;
 		}
-		total_written += written;
 	}
 
 	close(fd);
